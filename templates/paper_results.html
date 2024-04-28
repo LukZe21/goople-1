@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Goople</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 2em;
+            color: #333;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Goople</h1>
+        <form action="/search" method="get">
+            <input type="text" name="query" placeholder="Search the academia...">
+            <button type="submit">Search</button>
+        </form> 
+    </header>
+    <div class="container">
+        <h1>{{data['title']}}</h1>
+        <p>{{data['abstract']}}</p>
+        <p>Authors: {{data['authors']}}</p>
+        <p>Cites: {{data['cites']}}</p>
+        
+        <a href="{{ url_for('home') }}" class="button">Go back</a>
+    </div>
+</body>
+</html>

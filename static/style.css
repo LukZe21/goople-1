@@ -1,0 +1,93 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Light background */
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #3498db; /* Blue header */
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 160px);
+}
+
+form {
+    display: flex;
+    background-color: white;
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+    overflow: hidden; /* Prevent button from overflowing */
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 15px;
+    border: none;
+    font-size: 16px;
+    width: 300px;
+}
+
+button {
+    padding: 15px 25px;
+    background-color: #f1c40f; /* Yellow button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #f39c12; /* Darker yellow on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.container {
+    max-width: 800px;
+    padding: 20px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position:sticky;
+    bottom: 20px; /* Position the button 20px from the bottom */
+    left: 50%; /* Position the button horizontally centered */
+    transform: translateX(-50%); /* Adjust horizontal centering */
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button:active {
+    background-color: #0a4c92;
+}

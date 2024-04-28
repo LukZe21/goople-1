@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Goople</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+            <h1>Goople</h1>
+            <form action="/search" method="get">
+                <input type="text" name="query" placeholder="Search the academia...">
+                <button type="submit">Search</button>
+            </form>
+    </header>
+    
+
+    <footer>
+        <p>© 2024 Goople</p>
+    </footer>
+</body>
+</html>

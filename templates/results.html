@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Goople - {{search_query}}</title>
+</head>
+<body>
+    <header>
+        <h1>Goople</h1>
+        <form action="/search" method="get">
+            <input type="text" name="query" value="{{search_query}}" placeholder="Search the academia...">
+            <button type="submit">Search</button>
+        </form> 
+    </header>
+    <div class="container">
+        <h1>Results</h1>
+        <p>Showing results for: <b>{{search_query}}</b></p>
+        {% for index, row in results.iterrows() %}
+            <a href="{{url_for('research_paper', idx=index)}}"><h2>{{row['title']}}</h2></a>
+            <br>
+        {% endfor %}
+    </div>
+    <a href="{{ url_for('home') }}" class="button">Go back</a>
+</body>
+</html>
